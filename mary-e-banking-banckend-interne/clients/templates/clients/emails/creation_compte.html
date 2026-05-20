@@ -1,0 +1,62 @@
+<!-- clients/templates/clients/emails/creation_compte.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 600px; margin: auto; padding: 20px; }
+        .header { background: #003366; color: white; padding: 20px; text-align: center; }
+        .content { padding: 20px; background: #f9f9f9; }
+        .info-box { 
+            background: white; 
+            border-left: 4px solid #003366; 
+            padding: 15px; 
+            margin: 15px 0; 
+        }
+        .footer { 
+            text-align: center; 
+            padding: 20px; 
+            font-size: 12px; 
+            color: #666; 
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Votre compte bancaire</h1>
+        </div>
+        
+        <div class="content">
+            <p>Bonjour <strong>{{ client.nom_complet }}</strong>,</p>
+            
+            <p>Votre compte bancaire a été créé avec succès.</p>
+            
+            <div class="info-box">
+                <h3>Détails du compte</h3>
+                <p><strong>Numéro de compte :</strong> {{ client.numero_compte }}</p>
+                <p><strong>Type de compte :</strong> {{ client.get_type_compte_display }}</p>
+                <p><strong>Devise :</strong> {{ client.get_devise_display }}</p>
+            </div>
+            
+            <p>Votre compte sera activé prochainement par un conseiller. Vous recevrez un email de confirmation dès que votre compte sera actif.</p>
+            
+            <p>Une fois activé, vous pourrez :</p>
+            <ul>
+                <li>Définir votre mot de passe</li>
+                <li>Consulter votre solde</li>
+                <li>Effectuer des transactions</li>
+            </ul>
+            
+            <p>Pour toute question, contactez notre service client.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Ce message est confidentiel. Si vous n'êtes pas le destinataire, veuillez le supprimer.</p>
+            <p>© 2024 Votre Banque. Tous droits réservés.</p>
+        </div>
+    </div>
+</body>
+</html>
