@@ -75,16 +75,13 @@ WSGI_APPLICATION = "banking_system.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'banque_db',           # Nom de la base
-        'USER': 'postgres',         # Utilisateur
-        'PASSWORD': 'asim12345',  # Mot de passe
-        'HOST': 'localhost',           # ou l'IP du serveur PG
-        'PORT': '5432',               # Port par défaut
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'banque_db',          # Database name
+        'USER': 'root',               # MySQL username
+        'PASSWORD': 'asim12345',      # MySQL password
+        'HOST': '192.168.5.50',       # MySQL server host
+        'PORT': '3306',               # Default MySQL port
         'CONN_MAX_AGE': 600,          # Connection pooling (10 minutes)
-        'OPTIONS': {
-            'client_encoding': 'UTF8',
-        },
     }
 }
 
