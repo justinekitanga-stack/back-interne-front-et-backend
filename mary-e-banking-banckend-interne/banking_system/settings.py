@@ -77,9 +77,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'banque_db',          # Database name
-        'USER': 'root',               # MySQL username
-        'PASSWORD': 'asim12345',      # MySQL password
-        'HOST': '192.168.5.50',       # MySQL server host
+        'USER': 'justine',            # MySQL username
+        'PASSWORD': 'Asim@123',  # MySQL password
+        'HOST': '192.168.23.133',     # MySQL server host
         'PORT': '3306',               # Default MySQL port
         'CONN_MAX_AGE': 600,          # Connection pooling (10 minutes)
     }
